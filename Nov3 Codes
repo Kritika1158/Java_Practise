@@ -1,0 +1,62 @@
+Finding Diagonals of Matrix:
+import java.util.Scanner;
+
+public class matrix {
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int r,c;
+        System.out.print("row: ");
+        r=sc.nextInt();
+        System.out.print("col: ");
+        c=sc.nextInt();
+        int arr[][]=new int[r][c];
+        System.out.println("Enter array: ");
+        for(int i=0; i<r; i++)
+        {
+            for(int j=0; j<c; j++)
+            {
+                arr[i][j]=sc.nextInt();
+            }
+        }
+        for(int i=0; i<r; i++)
+        {
+            for(int j=0; j<c; j++)
+            {
+                if(i==j)
+                {
+                    System.out.print(arr[i][j]+" ");
+                }
+            }
+        }
+    }
+}
+
+**
+2 Sorting using method:
+import java.util.*;
+public class Hello {
+    static int[] sort_ele(int x[])
+    {
+        int temp;
+        for(int i=0;i<=x.length-1;i++){
+        for(int j=i+1;j<=x.length-1;j++){
+            if (x[i]>x[j]){
+                temp=x[j];
+                x[j]=x[i];
+                x[i]=temp;
+            }
+        }
+}       return x;
+    }
+    public static void main(String [] args)
+    {
+        Scanner sc=new Scanner(System.in);
+
+        int a[] = {11,1,5,8,3};
+        int j[]=sort_ele(a);
+        for(int i=0;i<j.length;i++){
+            System.out.println(j[i]+" ");
+        }
+    }
+}
